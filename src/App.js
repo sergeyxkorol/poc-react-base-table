@@ -6,25 +6,23 @@ import { generateColumns } from "./utils";
 import "./App.scss";
 
 function App() {
-  const columns = generateColumns(10);
-
-  const [filteredColumns, setFilteredCol] = useState(columns);
+  const [columns, setColumns] = useState(generateColumns(10));
 
   function handleFilter(columnKey, value) {
-    const updatedColumns = filteredColumns.map(col => {
+    const updatedColumns = columns.map(col => {
       const column = col;
       if (column.key === columnKey) {
         column.hidden = !column.hidden;
       }
       return column;
     });
-    setFilteredCol(updatedColumns);
+    setColumns(updatedColumns);
   }
 
   // Columns settings
   const fixedColumns = useMemo(
     () =>
-      filteredColumns.map((column, columnIndex) => {
+      columns.map((column, columnIndex) => {
         let frozen;
         if (columnIndex < 1) frozen = Column.FrozenDirection.LEFT;
 
@@ -37,7 +35,7 @@ function App() {
           maxWidth: 300
         };
       }),
-    [filteredColumns]
+    [columns]
   );
 
   return (
