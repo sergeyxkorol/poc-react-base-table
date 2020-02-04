@@ -1,27 +1,14 @@
 import React, { useState, useRef } from "react";
-import BaseTable, { Column, SortOrder } from "react-base-table";
-import { generateColumns, generateData } from "../utils";
+import BaseTable, { SortOrder } from "react-base-table";
+import { generateData } from "../utils";
 import "react-base-table/styles.css";
 import "./Table.scss";
 
-export default function Table() {
-  const columns = generateColumns(10);
+export default function Table({ columns }) {
   const data = generateData(columns, 500);
 
-  const fixedColumns = columns.map((column, columnIndex) => {
-    let frozen;
-    if (columnIndex < 1) frozen = Column.FrozenDirection.LEFT;
-    return {
-      ...column,
-      frozen,
-      resizable: true,
-      sortable: true,
-      maxWidth: 300
-    };
-  });
-
+  // Sorting
   const defaultSort = { key: "column-0", order: SortOrder.ASC };
-
   const [sortedData, setSortedData] = useState(data);
   const [sortBy, setSortBy] = useState(defaultSort);
 
@@ -30,6 +17,7 @@ export default function Table() {
     setSortedData(sortedData.reverse());
   };
 
+  // Columns highlighting
   const tableRef = useRef(null);
 
   const cellProps = ({ columnIndex }) => ({
@@ -51,8 +39,7 @@ export default function Table() {
   return (
     <BaseTable
       ref={tableRef}
-      fixed
-      columns={fixedColumns}
+      columns={columns}
       data={sortedData}
       width={1000}
       height={400}
@@ -60,6 +47,7 @@ export default function Table() {
       onColumnSort={onColumnSort}
       cellProps={cellProps}
       headerCellProps={headerCellProps}
+      fixed
     />
   );
 }
