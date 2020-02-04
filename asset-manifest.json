@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/poc-react-base-table/static/css/main.e64a3231.chunk.css",
+    "main.js": "/poc-react-base-table/static/js/main.d1dd8270.chunk.js",
+    "main.js.map": "/poc-react-base-table/static/js/main.d1dd8270.chunk.js.map",
+    "runtime-main.js": "/poc-react-base-table/static/js/runtime-main.d836cf94.js",
+    "runtime-main.js.map": "/poc-react-base-table/static/js/runtime-main.d836cf94.js.map",
+    "static/css/2.641454a3.chunk.css": "/poc-react-base-table/static/css/2.641454a3.chunk.css",
+    "static/js/2.0324425f.chunk.js": "/poc-react-base-table/static/js/2.0324425f.chunk.js",
+    "static/js/2.0324425f.chunk.js.map": "/poc-react-base-table/static/js/2.0324425f.chunk.js.map",
+    "index.html": "/poc-react-base-table/index.html",
+    "precache-manifest.7fde8ba27024d8b5c70284095400466c.js": "/poc-react-base-table/precache-manifest.7fde8ba27024d8b5c70284095400466c.js",
+    "service-worker.js": "/poc-react-base-table/service-worker.js",
+    "static/css/2.641454a3.chunk.css.map": "/poc-react-base-table/static/css/2.641454a3.chunk.css.map",
+    "static/css/main.e64a3231.chunk.css.map": "/poc-react-base-table/static/css/main.e64a3231.chunk.css.map",
+    "static/js/2.0324425f.chunk.js.LICENSE.txt": "/poc-react-base-table/static/js/2.0324425f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d836cf94.js",
+    "static/css/2.641454a3.chunk.css",
+    "static/js/2.0324425f.chunk.js",
+    "static/css/main.e64a3231.chunk.css",
+    "static/js/main.d1dd8270.chunk.js"
+  ]
+}
