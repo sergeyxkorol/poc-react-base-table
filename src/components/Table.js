@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import BaseTable, { Column, SortOrder } from "react-base-table";
 import { generateColumns, generateData } from "../utils";
 import "react-base-table/styles.css";
@@ -30,8 +30,27 @@ export default function Table() {
     setSortedData(sortedData.reverse());
   };
 
+  const tableRef = useRef(null);
+
+  const cellProps = ({ columnIndex }) => ({
+    "data-col-idx": columnIndex,
+    onMouseEnter: () => {
+      const table = tableRef.current.getDOMNode();
+      table.classList.add(`active-col-${columnIndex}`);
+    },
+    onMouseLeave: () => {
+      const table = tableRef.current.getDOMNode();
+      table.classList.remove(`active-col-${columnIndex}`);
+    }
+  });
+
+  const headerCellProps = ({ columnIndex }) => ({
+    "data-col-idx": columnIndex
+  });
+
   return (
     <BaseTable
+      ref={tableRef}
       fixed
       columns={fixedColumns}
       data={sortedData}
@@ -39,6 +58,8 @@ export default function Table() {
       height={400}
       sortBy={sortBy}
       onColumnSort={onColumnSort}
+      cellProps={cellProps}
+      headerCellProps={headerCellProps}
     />
   );
 }
