@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/poc-react-base-table/static/css/main.48a4f795.chunk.css",
-    "main.js": "/poc-react-base-table/static/js/main.86102a60.chunk.js",
-    "main.js.map": "/poc-react-base-table/static/js/main.86102a60.chunk.js.map",
+    "main.css": "/poc-react-base-table/static/css/main.2ff22d43.chunk.css",
+    "main.js": "/poc-react-base-table/static/js/main.2d432795.chunk.js",
+    "main.js.map": "/poc-react-base-table/static/js/main.2d432795.chunk.js.map",
     "runtime-main.js": "/poc-react-base-table/static/js/runtime-main.d836cf94.js",
     "runtime-main.js.map": "/poc-react-base-table/static/js/runtime-main.d836cf94.js.map",
     "static/css/2.641454a3.chunk.css": "/poc-react-base-table/static/css/2.641454a3.chunk.css",
-    "static/js/2.a78d08a7.chunk.js": "/poc-react-base-table/static/js/2.a78d08a7.chunk.js",
-    "static/js/2.a78d08a7.chunk.js.map": "/poc-react-base-table/static/js/2.a78d08a7.chunk.js.map",
+    "static/js/2.8c33b239.chunk.js": "/poc-react-base-table/static/js/2.8c33b239.chunk.js",
+    "static/js/2.8c33b239.chunk.js.map": "/poc-react-base-table/static/js/2.8c33b239.chunk.js.map",
     "index.html": "/poc-react-base-table/index.html",
-    "precache-manifest.df19cd8b7a7862471b64255aeeaa3f32.js": "/poc-react-base-table/precache-manifest.df19cd8b7a7862471b64255aeeaa3f32.js",
+    "precache-manifest.8151fd773ded44813b4724ea89372137.js": "/poc-react-base-table/precache-manifest.8151fd773ded44813b4724ea89372137.js",
     "service-worker.js": "/poc-react-base-table/service-worker.js",
     "static/css/2.641454a3.chunk.css.map": "/poc-react-base-table/static/css/2.641454a3.chunk.css.map",
-    "static/css/main.48a4f795.chunk.css.map": "/poc-react-base-table/static/css/main.48a4f795.chunk.css.map",
-    "static/js/2.a78d08a7.chunk.js.LICENSE.txt": "/poc-react-base-table/static/js/2.a78d08a7.chunk.js.LICENSE.txt"
+    "static/css/main.2ff22d43.chunk.css.map": "/poc-react-base-table/static/css/main.2ff22d43.chunk.css.map",
+    "static/js/2.8c33b239.chunk.js.LICENSE.txt": "/poc-react-base-table/static/js/2.8c33b239.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d836cf94.js",
     "static/css/2.641454a3.chunk.css",
-    "static/js/2.a78d08a7.chunk.js",
-    "static/css/main.48a4f795.chunk.css",
-    "static/js/main.86102a60.chunk.js"
+    "static/js/2.8c33b239.chunk.js",
+    "static/css/main.2ff22d43.chunk.css",
+    "static/js/main.2d432795.chunk.js"
   ]
 }
