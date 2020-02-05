@@ -12,7 +12,7 @@ function App() {
 
   const [columns, setColumns] = useState(generatedColumns);
 
-  function handleFilter(columnKey, value) {
+  function handleFilter(columnKey) {
     const updatedColumns = columns.map(col => {
       const column = col;
       if (column.key === columnKey) {
@@ -23,16 +23,23 @@ function App() {
     setColumns(updatedColumns);
   }
 
+  function handleCellEdit(data) {
+    console.log(data);
+  }
+
   // Columns settings
   const fixedColumns = useMemo(
     () =>
       columns.map((column, columnIndex) => {
         let frozen;
+        let onChange;
         if (columnIndex < 1) frozen = Column.FrozenDirection.LEFT;
+        if (columnIndex === 1) onChange = handleCellEdit;
 
         return {
           ...column,
           frozen,
+          onChange,
           hidden: column.hidden,
           resizable: true,
           sortable: true,
