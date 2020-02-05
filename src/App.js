@@ -12,7 +12,7 @@ function App() {
 
   const [columns, setColumns] = useState(generatedColumns);
 
-  function handleFilter(columnKey, value) {
+  function handleFilter(columnKey) {
     const updatedColumns = columns.map(col => {
       const column = col;
       if (column.key === columnKey) {
