@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Column } from "react-base-table";
+import { AutoResizer, Column } from "react-base-table";
 import Table from "./components/Table";
 import Filter from "./components/Filter";
 import EditableCell from "./components/EditableCell";
@@ -48,7 +48,9 @@ function App() {
         <Filter columns={columns} onChange={handleFilter} />
       </div>
       <div className="App-table">
-        <Table columns={fixedColumns} />
+        <AutoResizer>
+          {props => <Table {...props} columns={fixedColumns} />}
+        </AutoResizer>
       </div>
     </div>
   );
