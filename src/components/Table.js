@@ -4,8 +4,8 @@ import { generateData } from "../utils";
 import "react-base-table/styles.css";
 import "./Table.scss";
 
-export default function Table({ columns }) {
-  const data = generateData(columns, 500);
+export default function Table({ ...props }) {
+  const data = generateData(props.columns, 500);
 
   // Sorting
   const defaultSort = { key: "column-0", order: SortOrder.ASC };
@@ -39,10 +39,10 @@ export default function Table({ columns }) {
   return (
     <BaseTable
       ref={tableRef}
-      columns={columns}
+      columns={props.columns}
       data={sortedData}
-      width={1000}
-      height={400}
+      width={props.width}
+      height={props.height}
       sortBy={sortBy}
       onColumnSort={onColumnSort}
       cellProps={cellProps}
