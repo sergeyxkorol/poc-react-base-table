@@ -10,6 +10,8 @@ export default class EditableCell extends PureComponent {
     this.setState({
       value: e.target.value
     });
+
+    this.props.column.onChange(e.target.value);
   };
 
   render() {
